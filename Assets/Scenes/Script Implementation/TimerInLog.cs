@@ -1,8 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-public class TimerInLog : MonoBehaviour
-{
+public class TimerInLog :MonoBehaviour {
 	public int timeToCount = 3;
 	private Timer timer;
 
@@ -27,7 +26,7 @@ public class TimerInLog : MonoBehaviour
 	}
 
 	private void PrintInLog(float time) {
-		Debug.Log (Math.Truncate(time*1000) / 1000);
+		Debug.Log (Math.Truncate (time * 1000) / 1000);
 	}
 
 }
