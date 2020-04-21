@@ -20,12 +20,14 @@ public class TimerInUI :MonoBehaviour {
 	}
 
 	public void StartCountDownAsync() {
-		Timer.CountdownAsync (timeToCount, false, PrintInTimer2);
+		Timer.CountdownAsync (timeToCount, PrintInTimer2); // This method doesn't allow time scaled counters
 	}
 
 	public void StartCountDownCoroutine() {
 		timer.Countdown (timeToCount, false, PrintInTimer3);
 	}
+
+
 
 	private void PrintInTimer1(float time) {
 		timer1.text = (Math.Truncate (time * 1000) / 1000).ToString ();

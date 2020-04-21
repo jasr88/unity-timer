@@ -27,11 +27,9 @@ public class Timer :MonoBehaviour {
 	/// Countdown based Async methods, this is not the best aproach but it works, this method only show seconds
 	/// </summary>
 	/// <param name="time">Number of seconds to countdown.</param>
-	/// <param name="isRealSeconds">This parameter indicates if the countdown is on a game-scaled time or in real time</param>
 	/// <param name="callback">Action called every second during the countdown, this action recibes a interger parameter that indicates the remaining time in the countdown</param>
 	public static async void CountdownAsync(
 		int time,
-		bool isRealSeconds,
 		Action<int> callbackBySecond = null
 	) {
 		int remainingTime = time;
